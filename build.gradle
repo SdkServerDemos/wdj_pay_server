@@ -25,16 +25,17 @@ test {
 }
 
 dependencies {
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.5.0'
     compile 'org.apache.commons:commons-lang3:3.1'
     compile 'commons-codec:commons-codec:1.10'
-    compile 'org.apache.httpcomponents:httpclient:4.2.1'
+    compile 'commons-httpclient:commons-httpclient:3.1'
     compile 'net.minidev:json-smart:2.0'
     compile 'net.iharder:base64:2.3.8'
     compile 'junit:junit:4.11'
 }
 
 task(runPayDemo, dependsOn: 'classes', type: JavaExec) {
-    main = 'com.wandoujia.rsatest.RsaTest'
+    main = 'com.anzhi.Login'
     classpath = sourceSets.main.runtimeClasspath
 }
 
